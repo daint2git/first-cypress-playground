@@ -1,0 +1,40 @@
+{
+  "name": "first-cypress-playground",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:client": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "lint": "eslint --ext .ts,.tsx .",
+    "dev:server": "json-server ./json-server/db.json --config ./json-server/config.json",
+    "dev:all": "npm-run-all --parallel --print-label dev:client dev:server"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.3.5",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "framer-motion": "^7.5.2",
+    "json-server": "^0.17.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "react-router-dom": "^6.4.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "@vitejs/plugin-react": "^2.1.0",
+    "cypress": "^10.9.0",
+    "eslint": "^8.24.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
+}
