@@ -62,8 +62,8 @@ jobs:
           wait-on: "http://localhost:1234"
           wait-on-timeout: 60
           browser: chrome
-          record: false
-          group: "UI - Chrome"
+          # record: false
+          # group: "UI - Chrome"
           config-file: cypress.config.ts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -94,8 +94,8 @@ jobs:
           wait-on: "http://localhost:1234"
           wait-on-timeout: 60
           browser: chrome
-          record: false
-          group: "UI - Chrome - Mobile"
+          # record: false
+          # group: "UI - Chrome - Mobile"
           config-file: cypress.config.ts
           config: "viewportWidth=375,viewportHeight=667"
         env:
