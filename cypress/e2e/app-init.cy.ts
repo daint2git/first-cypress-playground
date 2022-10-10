@@ -50,12 +50,12 @@ describe("App initialization", () => {
   });
 
   it("Displays an error on failure", () => {
-    cy.visit("/");
-
     cy.intercept("GET", "http://localhost:3030/api/todos", {
       statusCode: 500,
       body: {},
     });
+
+    cy.visit("/");
 
     cy.get(".todo-list li").should("not.exist");
 
