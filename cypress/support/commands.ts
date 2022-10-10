@@ -48,8 +48,6 @@ declare global {
 }
 
 Cypress.Commands.add("sendAndVisit", (todos?: TodoType[]) => {
-  cy.visit("/");
-
   // cy.fixture("todos").then((json) => {
   //   cy.intercept("GET", "http://localhost:3030/api/todos", {
   //     statusCode: 200,
@@ -68,6 +66,8 @@ Cypress.Commands.add("sendAndVisit", (todos?: TodoType[]) => {
           fixture: "todos",
         }
   );
+
+  cy.visit("/");
 });
 
 export {};

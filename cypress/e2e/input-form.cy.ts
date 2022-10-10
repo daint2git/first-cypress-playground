@@ -1,13 +1,13 @@
 describe("input form", () => {
-  beforeEach(() => {
-    cy.visit("/");
-  });
-
   it("focuses input on load", () => {
+    cy.visit("/");
+
     cy.focused().should("have.class", "new-todo");
   });
 
   it("accepts input", () => {
+    cy.visit("/");
+
     const newTodo = "Learn cypress";
     cy.get(".new-todo").type(newTodo).should("have.value", newTodo);
   });
@@ -24,6 +24,8 @@ describe("input form", () => {
         statusCode: 200,
         body: [],
       });
+
+      cy.visit("/");
 
       const newTodo = "Learn cypress";
       cy.get(".new-todo")
@@ -52,6 +54,8 @@ describe("input form", () => {
         statusCode: 500,
         body: {},
       });
+
+      cy.visit("/");
 
       cy.get(".new-todo").type("test{enter}");
 
